@@ -215,3 +215,7 @@ augroup SpicyAutoCommands
   " autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
   " autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
 augroup END
+
+augroup CoreysMadMappings
+  map <leader>1 :on<cr>:AV<cr>
+augroup END
