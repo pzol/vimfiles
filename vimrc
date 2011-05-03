@@ -22,8 +22,8 @@ set autoread
 
 " Explicitly set 256 color support
 " set t_Co=256
-
-colorscheme krunktastic " github256
+set background=dark
+colorscheme solarized "krunktastic  github256
 
 " TEXT SETTINGS
 
@@ -66,11 +66,13 @@ set wildmenu
 " KEYBINDINGS
 
 " Quick, jump out of insert mode while no one is looking
-" imap ii <Esc>
+"imap ii <Esc>
 
 " Yank from the cursor to the end of the line, to be consistent with C and D.
 nnoremap Y y$
 
+" Open a new TAB
+map <leader>tn :tabnew<cr>
 
 " CUSTOM PLUGINS
 
@@ -118,7 +120,7 @@ let NERDTreeShowBookmarks = 1
 let NERDTreeShowHidden = 1
 
 " Don't hijack NETRW
-let NERDTreeHijackNetrw = 0
+let NERDTreeHijackNetrw = 1
 let NERDTreeIgnore=['\.$', '\~$']
 
 " Make F2 open NERDTree
