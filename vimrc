@@ -74,6 +74,11 @@ nnoremap Y y$
 " Open a new TAB
 map <leader>tn :tabnew<cr>
 
+" Enable highlight search
+set hlsearch
+" Press Space to turn off highlighting and clear any message already displayed.
+:nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
+
 " CUSTOM PLUGINS
 
 " FuzzyFinder Path Splitting (ala textmate)
@@ -120,7 +125,7 @@ let NERDTreeShowBookmarks = 1
 let NERDTreeShowHidden = 1
 
 " Don't hijack NETRW
-let NERDTreeHijackNetrw = 1
+let NERDTreeHijackNetrw = 0
 let NERDTreeIgnore=['\.$', '\~$']
 
 " Make F2 open NERDTree
@@ -192,6 +197,8 @@ let NERDTreeIgnore=['\.$', '\~$']
 
 
 " AUTOCOMMANDS
+" format json files like javascript
+autocmd BufNewFile,BufRead *.json set ft=javascript
 
 function! CustomClojureSettings()
   set filetype=clojure

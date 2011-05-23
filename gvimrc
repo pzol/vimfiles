@@ -23,7 +23,7 @@
   set guioptions+=e
 
 " Don't highlight search result.
-  set nohlsearch
+"  set nohlsearch
 
 " Disable bell.
   set vb t_vb=
